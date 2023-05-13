@@ -9,6 +9,8 @@ Let's look at an example:
 ```md
 An in-text citation :cite[knuth:1984] wow!
 
+Another one! :cite[lesk:1977]
+
 ## Bibliography
 
 :::bib
@@ -53,10 +55,11 @@ The style of the bibliography. This can be any of the following:
 - `chicago`
 - etc.
 
-See the `citation-js` docs for more information.
+See the `citation-js` [docs](https://citation.js.org/api/tutorial-output_formats.html) for more information.
 
 ## Notes
 
+- This requires the usage of [`remark-directive`](https://github.com/remarkjs/remark-directive). Make sure to add this plugin before adding this one!
 - Do **not** have more than one bibliography in a markdown file. This will cause the plugin to break. Put everything in one `bib` directive, and it will work fine.
 
 ## TODO
