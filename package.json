@@ -24,7 +24,7 @@
 	},
 	"license": "MIT",
 	"main": "index.js",
-	"name": "remark-bibliography",
+	"name": "@cogsandsquigs/remark-bibliography",
 	"scripts": {
 		"test": "jest"
 	},
