@@ -60,9 +60,15 @@ See the `citation-js` [docs](https://citation.js.org/api/tutorial-output_formats
 ## Notes
 
 - This requires the usage of [`remark-directive`](https://github.com/remarkjs/remark-directive). Make sure to add this plugin before adding this one!
+- If your markdown parser freaks out because of BibTeX's curly braces (say, if you're using MDX), then you can wrap the BibTeX in a code block. Hacky, but it works! Unfortunately, this is an error due to the markdown parser, and not this plugin. So it's out of my control. :(
+
 - Do **not** have more than one bibliography in a markdown file. This will cause the plugin to break. Put everything in one `bib` directive, and it will work fine.
 
 ## TODO
 
 - Get tests with Jest working.
 - Add more supported types for the bibliography.
+
+```
+
+```
