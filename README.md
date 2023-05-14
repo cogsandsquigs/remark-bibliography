@@ -207,4 +207,4 @@ Open an issue or pull request for anything you’d like to see!
 
 ## License
 
-[MIT](license) © [Ian Pratt](https://github.com/cogsandsquigs)
+[MIT](LICENSE) © [Ian Pratt](https://github.com/cogsandsquigs)
