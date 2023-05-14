@@ -13,6 +13,7 @@
 		"eslint": "^8.40.0",
 		"eslint-plugin-prettier": "^4.2.1",
 		"prettier": "^2.8.8",
+		"remark-directive": "^2.0.1",
 		"remark-parse": "^10.0.1",
 		"remark-stringify": "^10.0.2",
 		"ts-jest": "^29.1.0",
