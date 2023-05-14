@@ -145,7 +145,7 @@ Note that the bibliography has the style `csl-bib-body` and each entry has the s
 This package exports no identifiers.
 The default export is `remarkBibliography`.
 
-### `unified().use(remarkBibliography)`
+### `unified().use(remarkBibliography[, options])`
 
 Plugin to add a bibliography to your Markdown document.
 
