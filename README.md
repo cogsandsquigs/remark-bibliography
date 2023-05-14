@@ -198,7 +198,7 @@ So long as [citation-js](https://citation.js.org/) is safe, this plugin should b
 
 ## Related
 
-- [`remark-bibliography`](https://github.com/Symbitic/remark-plugins/blob/master/packages/remark-bibliography/README.md) - Remark plugin for adding citations and bibliographies to Markdown documents through external files
+- [`remark-bibliography`](https://github.com/Symbitic/remark-plugins/blob/master/packages/remark-bibliography/README.md) - Remark plugin for adding citations and bibliographies to Markdown documents through external files.
 - [`remark-cite`](https://github.com/benrbray/remark-cite) - Remark plugin for citations and bibliographies, `pandoc`-style.
 
 ## Contribute
