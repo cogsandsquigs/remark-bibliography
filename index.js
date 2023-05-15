@@ -11,15 +11,24 @@ import { visit } from "unist-util-visit";
 export const remarkBibliographyPlugin =
 	(
 		options = {
-			style: "apa"
+			style: "apa",
+			export: false,
+			exportProperty: false
 		}
 	) =>
-	(tree, _) => {
+	(tree, vfile) => {
 		// Parse the bibliography
 		let bib = parseBibliography(options, tree);
 
-		// Parse citations
-		parseCitations(bib, options, tree);
+		// If the user wants to export the bibliography, do so
+		if (options.export) {
+			vfile.data[options.exportProperty] = bib;
+		}
+
+		// If a bibliography DOES exist, parse citations
+		if (bib != undefined) {
+			parseCitations(bib, options, tree);
+		}
 	};
 
 /**
@@ -29,10 +38,10 @@ export const remarkBibliographyPlugin =
  * @param {import("../index").Options} options The options for the plugin.
  * @param {import('unified').Plugin<[], import('mdast').Root>} tree The tree to
  * run the plugin on.
- * @returns {import('citation-js').Cite} The parsed bibliography, as a `Cite` object.
+ * @returns {import('citation-js').Cite | undefined} The parsed bibliography, as a `Cite` object.
  */
 const parseBibliography = (options, tree) => {
-	let bib = new Cite();
+	let bib = undefined; // Declare first, assign later
 
 	visit(tree, "containerDirective", async (node, index, parent) => {
 		// Early exit if this isn't a bibliography directive

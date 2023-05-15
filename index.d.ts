@@ -21,4 +21,16 @@ export interface Options {
 	 * @default "apa"
 	 */
 	style: string;
+
+	/**
+	 * If the Cite object should be added to the `data` property of the `VFile` being processed.
+	 * @default false
+	 */
+	export: boolean;
+
+	/**
+	 * The name of the property to add the Cite object to in the `data` property of the `VFile` being processed.
+	 * @default "bibliography"
+	 */
+	exportProperty: string;
 }

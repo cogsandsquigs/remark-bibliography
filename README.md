@@ -19,7 +19,6 @@ A bibliography plugin for Markdown.
 - [Compatibility](#compatibility)
 - [Security](#security)
 - [Notes](#notes)
-- [TODO](#todo)
 - [Related](#related)
 - [Contribute](#contribute)
 - [License](#license)
@@ -142,8 +141,7 @@ Note that the bibliography has the style `csl-bib-body` and each entry has the s
 
 ## API
 
-This package exports no identifiers.
-The default export is `remarkBibliography`.
+This package exports no identifiers. The default export is `remarkBibliography`.
 
 ### `unified().use(remarkBibliography[, options])`
 
@@ -153,14 +151,29 @@ Plugin to add a bibliography to your Markdown document.
 
 #### `style`
 
-The style of the bibliography. This can be any of the following:
+A string setting the style of the bibliography. This can be any of the following:
 
-- `apa`
-- `mla`
-- `chicago`
+- `"apa"`
+- `"mla"`
+- `"chicago"`
+- `"vancouver"`
 - etc.
 
 See the `citation-js` [docs](https://citation.js.org/api/tutorial-output_formats.html) for more information.
+
+Defaults to `"apa"`.
+
+#### `export`
+
+A boolean detailing if the Cite object should be added to the `data` property of the `VFile` being processed.
+
+Defaults to `false`.
+
+#### `exportProperty`
+
+A string detailing the property of the `data` object to add the Cite object to.
+
+Defaults to `"bibliography"`.
 
 ## Syntax
 
@@ -190,11 +203,6 @@ So long as [citation-js](https://citation.js.org/) is safe, this plugin should b
 - This requires the usage of [`remark-directive`](https://github.com/remarkjs/remark-directive). Make sure to add this plugin before adding this one!
 - If your markdown parser freaks out because of BibTeX's curly braces (say, if you're using MDX), then you can wrap the BibTeX in a code block. Hacky, but it works! Unfortunately, this is an error due to the markdown parser, and not this plugin. So it's out of my control. :(
 - Do **not** have more than one bibliography in a markdown file. This will cause the plugin to break. Put everything in one `bib` directive, and it will work fine.
-
-## TODO
-
-- Get tests with Jest working.
-- Add more supported types for the bibliography.
 
 ## Related
 
