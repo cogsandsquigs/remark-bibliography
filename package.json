@@ -3,8 +3,8 @@
 	"dependencies": {
 		"@citation-js/plugin-bibtex": "^0.6.8",
 		"citation-js": "^0.6.8",
-		"remark": "^3.0.0",
 		"mdast-util-to-string": "^3.2.0",
+		"remark": "^3.0.0",
 		"unist-util-visit": "^4.1.2"
 	},
 	"description": "A bibliography plugin for Markdown.",
@@ -29,5 +29,5 @@
 	},
 	"type": "module",
 	"types": "./index.d.ts",
-	"version": "1.1.0"
+	"version": "1.1.1"
 }
