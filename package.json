@@ -3,7 +3,7 @@
 	"dependencies": {
 		"@citation-js/plugin-bibtex": "^0.6.8",
 		"citation-js": "^0.6.8",
-		"mdast": "^3.0.0",
+		"remark": "^3.0.0",
 		"mdast-util-to-string": "^3.2.0",
 		"unist-util-visit": "^4.1.2"
 	},

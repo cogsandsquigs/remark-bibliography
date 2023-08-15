@@ -1,6 +1,6 @@
-# remark-gemoji
+# remark-bibliography
 
-TODO: Add badges
+![GitHub](https://img.shields.io/github/license/cogsandsquigs/remark-bibliography?style=for-the-badge)
 
 A bibliography plugin for Markdown.
 
